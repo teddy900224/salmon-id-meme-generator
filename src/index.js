@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route } from "react-router-dom";
 
 ReactDOM.render(
-  <BrowserRouter basename ="/salmon-id-meme-generator">
-    <Route exact path="/" component={App} />
-  </BrowserRouter>,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
