@@ -1,3 +1,4 @@
+import React from 'react';
 import SalmonIdGenerator from './SalmonIdGenerator';
 
 function App() {
