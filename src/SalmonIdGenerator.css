@@ -1,0 +1,209 @@
+.GeneratorPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    color: white;
+}
+
+.title{
+    margin: 0;
+    margin-top: 10vh;
+    font-family: "PMingLiU";
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.subtitle{
+    margin: 0;
+    font-family: "PMingLiU";
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.formRow{
+    margin-bottom: 12.5px;
+    font-weight: 500;
+}
+
+.formLabel{
+    margin-right: 8px;
+}
+
+.formInput{
+    padding: 5px 7px;
+    border: 1px black;
+}
+
+.submitButton{
+    font-size: 15px;
+    padding: 5px 7px;
+    margin-top: 30px;
+    align-self: stretch;
+    margin-bottom: 10vh;
+    font-weight: 500;
+}
+
+.restartButton{
+    font-size: 18px;
+    margin-bottom: 10vh;
+    padding: 7px 10px;
+    font-weight: 500;
+}
+
+.idCard{
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.idCard_default{
+    width: 588px; 
+    height: 364px;
+    margin-bottom: 40px;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.end{
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.saveNote{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 800px){
+    .idCard_default{
+        width: 500px; 
+        height: 310px;
+        margin-bottom: 35px;
+    }
+
+    .idCard{
+        width: 500px; 
+        height: 310px;
+        margin-bottom: 60px;
+    }
+
+    .subtitle{
+        margin-bottom: 35px;
+    }
+}
+
+@media only screen and (max-width: 600px){    
+    .idCard_default{
+        width: 412px; 
+        height: 255px;
+        margin-bottom: 30px;
+    }
+
+    .idCard{
+        width: 412px; 
+        height: 255px;
+        margin-bottom: 55px;
+    }
+
+    .title{
+        font-size: 45px;
+        margin-top: 8vh;
+    }
+
+    .subtitle{
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .end{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .saveNote{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 475px){
+    .idCard_default{
+        width: 353px; 
+        height: 219px;
+        margin-bottom: 25px;
+    }
+    
+    .idCard{
+        width: 353px; 
+        height: 219px;
+        margin-bottom: 50px;
+    }
+
+    .title{
+        font-size: 35px;
+        margin-top: 6vh;
+    }
+
+    .subtitle{
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .end{
+        font-size: 25px;
+    }
+
+    .saveNote{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .idCard_default{
+        width: 294px; 
+        height: 182px;
+    }
+    
+    .idCard{
+        width: 294px; 
+        height: 182px;
+        margin-bottom: 45px;
+    }
+
+    .title{
+        font-size: 28px;
+        margin-top: 4vh;
+    }
+
+    .subtitle{
+        font-size: 14px;
+    }
+
+    .end{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .saveNote{
+        font-size: 12px;
+    }
+
+    .formRow{
+        margin-bottom: 10px;
+    }
+}
