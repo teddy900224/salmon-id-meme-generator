@@ -104,7 +104,7 @@ const SalmonIdGenerator = () => {
                 showResult? 
                     <div className="result"> 
                         <p className="end">Wow那你很會取名字喔😎😎😎</p>
-                        <p className="saveNote">*電腦按下右鍵可以保存，手機點擊圖片長按即可*</p>
+                        <p className="saveNote">*電腦按下右鍵可以保存，手機直接螢幕截圖*</p>
                         <button  className="restartButton" onClick={(e) => restart() }>再玩一次 🍣</button>
                     </div>                   
                     :
@@ -156,7 +156,7 @@ const SalmonIdGenerator = () => {
                             new_face.onload = () => setFace(new_face);                        
                         }}/>
 
-                        <input type="submit" value="完成 😎" className="submitButton"/>
+                        <button type="submit" className="submitButton">完成 😎</button>
                     </form>   
             }            
         </div>        

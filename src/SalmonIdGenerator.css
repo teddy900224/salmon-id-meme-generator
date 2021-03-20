@@ -43,6 +43,18 @@
     border: 1px black;
 }
 
+input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .submitButton{
     font-size: 15px;
     padding: 5px 7px;
@@ -50,6 +62,9 @@
     align-self: stretch;
     margin-bottom: 10vh;
     font-weight: 500;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .restartButton{
