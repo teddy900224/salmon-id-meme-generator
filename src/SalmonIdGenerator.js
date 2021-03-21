@@ -1,7 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react'
 import "./SalmonIdGenerator.css";
+import ReactGA from 'react-ga';
 
 const SalmonIdGenerator = () => {
+    useEffect(() => {
+        ReactGA.initialize("UA-164144151-1")
+        ReactGA.pageview('/')
+    },[])
+
     const today = new Date();
     const date = {
         date: today.getDate(),
@@ -9,7 +15,7 @@ const SalmonIdGenerator = () => {
         year: today.getFullYear()-1911,
     }
 
-    const days = [...Array(30).keys()].map(x => x+1)
+    const days = [...Array(31).keys()].map(x => x+1)
     const months = [...Array(12).keys()].map(x => x+1)
     const years = [...Array(date.year).keys()].map(x => date.year-x)
 
@@ -74,12 +80,21 @@ const SalmonIdGenerator = () => {
         const name = document.forms["idForm"]["name"].value;
         if (!name.includes("鮭魚")) {
             alert("名字沒鮭魚還想吃鮭魚？回去重寫 😠!");
+            ReactGA.event({
+                category: "Form rejeced",
+                action: "Form rejected due to name"
+            })
             return;
         }
 
         setShowResult(true);
         canvas.current.style.display = "block";
         deafaultImage.current.style.display = "none"
+        window.scrollTo({top: 0});
+        ReactGA.event({
+            category: "Submit",
+            action: "A new salmon meme id generated"
+        })
     }
 
     const getSpacedName = (name) => {
@@ -91,7 +106,12 @@ const SalmonIdGenerator = () => {
     const restart = (e) => {
         setShowResult(false);
         canvas.current.style.display = "none";
-        deafaultImage.current.style.display = "block"
+        deafaultImage.current.style.display = "block";
+        window.scrollTo({top: 0});
+        ReactGA.event({
+            category: "Restart",
+            action: "A user restarted the game"
+        })
     }
 
     return (
@@ -105,7 +125,7 @@ const SalmonIdGenerator = () => {
                     <div className="result"> 
                         <p className="end">Wow那你很會取名字喔😎😎😎</p>
                         <p className="saveNote">*電腦按下右鍵可以保存，手機直接螢幕截圖*</p>
-                        <button  className="restartButton" onClick={(e) => restart() }>再玩一次 🍣</button>
+                        <button  className="restartButton" onClick={(e) => restart() }>再玩一次 🍣</button>  
                     </div>                   
                     :
                     <form name="idForm" className="formContainer" onSubmit={ e => submitHandler(e)}>
@@ -153,12 +173,25 @@ const SalmonIdGenerator = () => {
                         <input type="file" accept="image/*" onChange={ e => {
                             const new_face = new Image();
                             new_face.src = URL.createObjectURL(e.target.files[0]);
-                            new_face.onload = () => setFace(new_face);                        
+                            new_face.onload = () => setFace(new_face);
+                            ReactGA.event({
+                                category: "Upload",
+                                action: "A user uploaded an image"
+                            })                        
                         }}/>
 
                         <button type="submit" className="submitButton">完成 😎</button>
                     </form>   
-            }            
+            }       
+            <div className="shareContainer">
+                <p className="shareMessage">覺得有趣的話分享出去吧🤪 ～</p>
+                <div class="fb-share-button" 
+                    className="fb-share-button"
+                    data-href="https://salmon-id-generator.netlify.app/" 
+                    data-layout="button_count">
+                </div>  
+            </div>       
+            <a className="hashtag" target="_blank" href="https://www.instagram.com/explore/tags/鮭魚身分證產生器/">#鮭魚身分證產生器</a>      
         </div>        
     )
 }

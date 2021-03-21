@@ -30,7 +30,7 @@
 }
 
 .formRow{
-    margin-bottom: 12.5px;
+    margin-bottom: 10px;
     font-weight: 500;
 }
 
@@ -43,35 +43,28 @@
     border: 1px black;
 }
 
-input{
+.submitButton{   
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-.submitButton{
+    background-color: white;
     font-size: 15px;
-    padding: 5px 7px;
-    margin-top: 30px;
+    padding: 8px;
+    margin-top: 20px;
     align-self: stretch;
-    margin-bottom: 10vh;
-    font-weight: 500;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    margin-bottom: 25px;
+    font-weight: 600;
+    border-radius: 5px;
 }
 
 .restartButton{
+    -webkit-appearance: none;
+    background-color: white;
     font-size: 18px;
-    margin-bottom: 10vh;
-    padding: 7px 10px;
-    font-weight: 500;
+    margin-bottom: 25px;
+    padding: 8px;
+    font-weight: 600;
+    align-self: stretch;
+    -webkit-appearance: none;
+    border-radius: 5px;
 }
 
 .idCard{
@@ -103,6 +96,30 @@ select{
     font-size: 20px;
     margin: 0;
     margin-bottom: 25px;
+}
+
+.shareContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.shareMessage{
+    margin: 0;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.fb-share-button{
+
+}
+
+.hashtag{
+    margin: 0;
+    font-size: 12px;
+    margin-bottom: 10vh;
+    color: #E1306C;
 }
 
 @media only screen and (max-width: 800px){
@@ -186,6 +203,21 @@ select{
     .saveNote{
         font-size: 14px;
     }
+
+    .submitButton{
+        margin-bottom: 15px;
+    }
+    .restartButton{
+        margin-bottom: 15px;
+    }
+
+    .shareMessage{
+        font-size: 10px;
+    }
+
+    .hashtag{
+        font-size: 10px;
+    }
 }
 
 @media only screen and (max-width: 375px){
@@ -220,5 +252,35 @@ select{
 
     .formRow{
         margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .idCard_default{
+        width: 236px; 
+        height: 146px;
+    }
+    
+    .idCard{
+        width: 236px; 
+        height: 146px;
+    }
+
+    .title{
+        font-size: 25px;
+        margin-top: 4vh;
+    }
+
+    .subtitle{
+        font-size: 12px;
+    }
+
+    .end{
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .saveNote{
+        font-size: 12px;
     }
 }
