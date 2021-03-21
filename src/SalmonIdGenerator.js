@@ -77,6 +77,7 @@ const SalmonIdGenerator = () => {
     }, [image, face, canvas, birthDate, name, sex])
     
     const submitHandler = (e) => {
+        e.preventDefault();
         const name = document.forms["idForm"]["name"].value;
         if (!name.includes("鮭魚")) {
             alert("名字沒鮭魚還想吃鮭魚？回去重寫 😠!");
