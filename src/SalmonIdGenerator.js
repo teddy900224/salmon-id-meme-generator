@@ -79,7 +79,7 @@ const SalmonIdGenerator = () => {
     const submitHandler = (e) => {
         e.preventDefault();
         const name = document.forms["idForm"]["name"].value;
-        if (!name.includes("鮭魚")) {
+        if (!name.includes("鮭") || !name.includes("魚")) {
             alert("名字沒鮭魚還想吃鮭魚？回去重寫 😠!");
             ReactGA.event({
                 category: "Form rejeced",
@@ -129,7 +129,7 @@ const SalmonIdGenerator = () => {
                         <button  className="restartButton" onClick={(e) => restart() }>再玩一次 🍣</button>  
                     </div>                   
                     :
-                    <form name="idForm" className="formContainer" onSubmit={ e => submitHandler(e)}>
+                    <form name="idForm" className="formContainer" autocomplete="off" onSubmit={ e => submitHandler(e)}>
                         <div className="name formRow">
                             <label for="idForm" className="formLabel">姓名</label>
                             <input type="text" name="name" placeholder="必須含有“鮭魚”二字 🍣" value={name} required className="formInput" onChange={ e => setName(e.target.value)}/>
