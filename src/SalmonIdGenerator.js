@@ -38,7 +38,7 @@ const SalmonIdGenerator = () => {
         fake_roc_id.onload = () => setImage(fake_roc_id);
 
         const face = new Image();
-        face.src = "https://izzycooking.com/wp-content/uploads/2020/10/Salmon-Nigiri-thumbnail-500x500.jpg";
+        face.src = "https://i.imgur.com/Mdea5ym.jpg";
         face.onload = () => setFace(face);
     }, [])
 
