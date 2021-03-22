@@ -34,10 +34,12 @@ const SalmonIdGenerator = () => {
 
     useEffect(() => {
         const fake_roc_id = new Image();
+        fake_roc_id .setAttribute('crossorigin', 'anonymous');
         fake_roc_id.src = "https://i.imgur.com/QBlys1A.png";
         fake_roc_id.onload = () => setImage(fake_roc_id);
 
         const face = new Image();
+        face.setAttribute('crossorigin', 'anonymous');
         face.src = "https://izzycooking.com/wp-content/uploads/2020/10/Salmon-Nigiri-thumbnail-500x500.jpg";
         face.onload = () => setFace(face);
     }, [])
@@ -114,6 +116,9 @@ const SalmonIdGenerator = () => {
             action: "A user restarted the game"
         })
     }
+    const getImgURL = () => {
+        return canvas.current.toDataURL("image/png");
+    }
 
     return (
         <div className="GeneratorPage">
@@ -126,7 +131,10 @@ const SalmonIdGenerator = () => {
                     <div className="result"> 
                         <p className="end">Wow那你很會取名字喔😎😎😎</p>
                         <p className="saveNote">*電腦按下右鍵可以保存，手機直接螢幕截圖*</p>
-                        <button  className="restartButton" onClick={(e) => restart() }>再玩一次 🍣</button>  
+                        <div className="buttonContainer">
+                            <a  className="downloadButton" href={getImgURL()} download='very-legit-id' >保存 💾</a>  
+                            <button  className="restartButton" onClick={(e) => restart() }>再玩一次 🍣</button>  
+                        </div>
                     </div>                   
                     :
                     <form name="idForm" className="formContainer" onSubmit={ e => submitHandler(e)}>
@@ -173,6 +181,7 @@ const SalmonIdGenerator = () => {
                         <label for="idForm" className="formLabel formRow">上傳大頭照（選填）</label>
                         <input type="file" accept="image/*" onChange={ e => {
                             const new_face = new Image();
+                            new_face.setAttribute('crossorigin', 'anonymous');
                             new_face.src = URL.createObjectURL(e.target.files[0]);
                             new_face.onload = () => setFace(new_face);
                             ReactGA.event({
