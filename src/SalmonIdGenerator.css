@@ -54,25 +54,17 @@
     font-weight: 600;
     border-radius: 5px;
 }
-.buttonContainer{
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-self: stretch;
-}
-.buttonContainer > * {
-    margin: 10px;
+
+.restartButton{
     -webkit-appearance: none;
     background-color: white;
     font-size: 18px;
+    margin-bottom: 25px;
     padding: 8px;
     font-weight: 600;
+    align-self: stretch;
+    -webkit-appearance: none;
     border-radius: 5px;
-    color: black;
-    text-decoration: none;
-    flex-grow: 1;
-    border: none;
-
 }
 
 .idCard{
@@ -215,7 +207,7 @@
     .submitButton{
         margin-bottom: 15px;
     }
-    .buttonContainer{
+    .restartButton{
         margin-bottom: 15px;
     }
 
