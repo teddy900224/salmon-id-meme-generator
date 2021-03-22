@@ -69,7 +69,7 @@ const SalmonIdGenerator = () => {
             ctx.fillText(date.month, 180, 314)
             ctx.fillText(date.date, 210, 314)
 
-            ctx.font = "300 30px PMingLiU, 'Noto Serif TC', serif"
+            ctx.font = "300 28px PMingLiU, 'Noto Serif TC', serif"
             ctx.fillStyle = "#ba2822"
             ctx.textAlign = "left"
             ctx.fillText("A123456789", 403, 325)
