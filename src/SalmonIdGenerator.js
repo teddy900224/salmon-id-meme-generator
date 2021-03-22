@@ -50,26 +50,26 @@ const SalmonIdGenerator = () => {
             // canvas.style.letterSpacing = 200/name.length + 'px';
 
             // ctx.fillRect(100,168,230,32)
-            ctx.font = "35px PMingLiU"
+            ctx.font = "600 35px PMingLiU, 'Noto Serif TC', serif"
             ctx.fillStyle = "#3f434a"
             ctx.textAlign = "left"
             ctx.fillText(getSpacedName(name), 100, 195, 230)
 
-            ctx.font = "22px PMingLiU"
+            ctx.font = "600 22px PMingLiU, 'Noto Serif TC', serif"
             ctx.textAlign = "center"
             ctx.fillText(birthDate.year, 165, 260)
             ctx.fillText(birthDate.month, 227.5, 260)
             ctx.fillText(birthDate.date, 290, 260)
             
-            ctx.font = "20px PMingLiU"
+            ctx.font = "600 20px PMingLiU, 'Noto Serif TC', serif"
             ctx.fillText(sex, 495, 265)
 
-            ctx.font = "17px PMingLiU"
+            ctx.font = "600 17px PMingLiU, 'Noto Serif TC', serif"
             ctx.fillText(date.year, 145, 314)
             ctx.fillText(date.month, 180, 314)
             ctx.fillText(date.date, 210, 314)
 
-            ctx.font = "100 30px PMingLiU"
+            ctx.font = "300 30px PMingLiU, 'Noto Serif TC', serif"
             ctx.fillStyle = "#ba2822"
             ctx.textAlign = "left"
             ctx.fillText("A123456789", 403, 325)
