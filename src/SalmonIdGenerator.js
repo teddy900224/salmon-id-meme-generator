@@ -40,7 +40,7 @@ const SalmonIdGenerator = () => {
 
         const face = new Image();
         face.setAttribute('crossorigin', 'anonymous');
-        face.src = "https://izzycooking.com/wp-content/uploads/2020/10/Salmon-Nigiri-thumbnail-500x500.jpg";
+        face.src = "https://i.imgur.com/Mdea5ym.jpg";
         face.onload = () => setFace(face);
     }, [])
 
