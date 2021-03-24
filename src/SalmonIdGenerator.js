@@ -91,9 +91,9 @@ const SalmonIdGenerator = () => {
     
     const submitHandler = (e) => {
         e.preventDefault();
-
+        
         //validate name input
-        const name = nameInput.current.value;
+        setName(name.trim());   //remove the extra space in the name
         if ( !(name.includes("鮭") && name.includes("魚"))) {
             alert("名字沒鮭魚還想吃鮭魚？回去重寫 😠!");
             //collects GA event usage
@@ -106,7 +106,7 @@ const SalmonIdGenerator = () => {
 
         setShowResult(true);
         canvas.current.style.display = "block";     //hide result 
-        deafaultCard.current.style.display = "none"     //hide default card image
+        deafaultCard.current.style.display = "none"     //hide default card imagez
 
         window.scrollTo({top: 0});
         //collects GA event usage
@@ -161,7 +161,7 @@ const SalmonIdGenerator = () => {
                     <form className="formContainer" autocomplete="off" onSubmit={ e => submitHandler(e)}>
                         <div className="name formRow">
                             <label for="idForm" className="formLabel">姓名</label>
-                            <input type="text" ref={nameInput} placeholder="必須含有“鮭魚”二字 🍣" value={name} required className="formInput" onChange={ e => setName(e.target.value)}/>
+                            <input type="text" placeholder="必須含有“鮭魚”二字 🍣" value={name} required className="formInput" onChange={ e => setName(e.target.value)}/>
                         </div>                
 
                         <div className="birthDate formRow">
