@@ -7,7 +7,7 @@ Web app project built with HTML, CSS, React that synthesize id images.\
 After inputting name, birth date, sex and image, the app then generates a salmon id card.
 
 ## 背景 (Background)
-2021年3月，知名連鎖壽司餐廳在台灣發起「若身分證上名字有『鮭魚』二字，可享免費壽司吃到飽」的優惠促銷活動，吸引媒體目光與掀起社群媒體上的大眾討論。此程式是設計為讓使用者能夠參與這場流行的「鮭魚之亂」，不用更改真的身份證也能享受娛樂。
+2021年3月，知名連鎖壽司餐廳在台灣發起「若身分證上名字有『鮭魚』二字，可享免費壽司吃到飽」的優惠促銷活動，吸引媒體目光與掀起社群媒體上的大眾討論。此程式是設計為讓使用者能夠參與這場流行的「鮭魚之亂」，不用更改真的身份證也能享受娛樂。\
 In March 2021, a chained sushi restaurant in Taiwan started a promotion as following: "If you have the exact word 'salmon' on your government ID card, you can receive free sushi all you can eat." This promotion attracted people's attention and became viral on social media. This app was designed for people who wanted to join the trend, without actually changing their names legally on their government ID.
 
 ## 畫面截圖 (Sample Screenshot)
