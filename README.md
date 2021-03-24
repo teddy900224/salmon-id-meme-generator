@@ -3,6 +3,10 @@
 Web app project built with HTML, CSS, React that synthesize id images.\
 After inputting name, birth date, sex and image, the app then generates a salmon id card.
 
+## Sample Screenshot
+![app screenshot](https://i.imgur.com/ipjJX7k.png)
+![sample id card](https://i.imgur.com/fZGQ85r.png)
+
 ## 使用紀錄 （Usage Record)
 https://docs.google.com/document/d/1_5A3juYZKv2ZuGcwOcgLWpaBqcCUAhcAZhdAsOj3KZI/edit?usp=sharing
 
