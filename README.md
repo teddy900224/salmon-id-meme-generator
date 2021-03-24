@@ -1,3 +1,12 @@
+# 鮭魚身分證產生器 (Salmon ID Generator)
+使用HTML, CSS, React製成的圖片合成App，輸入姓名、生日、性別及上傳圖片後，便可生成一張鮭魚身分證。
+Web app project built with HTML, CSS, React that synthesize id images. After inputting name, birth date, sex and image, the app then generates a salmon id card.
+
+## 使用紀錄 （Usage Record)
+https://docs.google.com/document/d/1_5A3juYZKv2ZuGcwOcgLWpaBqcCUAhcAZhdAsOj3KZI/edit?usp=sharing
+
+-----------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
