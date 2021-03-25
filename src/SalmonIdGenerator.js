@@ -85,7 +85,7 @@ const SalmonIdGenerator = () => {
             ctx.font = "300 28px PMingLiU, 'Noto Serif TC', serif"
             ctx.fillStyle = "#ba2822"
             ctx.textAlign = "left"
-            ctx.fillText("A123456789", 403, 325)
+            ctx.fillText("A312345678", 403, 325)
         }        
     }, [cardImage, headshot, canvas, birthDate, name, sex])
     
