@@ -56,7 +56,7 @@ const SalmonIdGenerator = () => {
             //initialize canvas
             const ctx = canvas.current.getContext("2d")
             ctx.drawImage(cardImage, 0, 0)
-            ctx.drawImage(headshot, 400, 30, 160, 160*1.285)
+            drawHeadshot(ctx, headshot);
 
             //name
             ctx.font = "600 35px PMingLiU, 'Noto Serif TC', serif"
@@ -88,6 +88,27 @@ const SalmonIdGenerator = () => {
             ctx.fillText("A312345678", 403, 325)
         }        
     }, [cardImage, headshot, canvas, birthDate, name, sex])
+
+    const drawHeadshot = (ctx, image) => {
+        const dimensionRatio = 1.285
+        const {naturalWidth, naturalHeight} = image
+        let sWidth, sHeight, sx, sy
+        if(naturalHeight/naturalWidth > dimensionRatio){
+            //source image height > width
+            sWidth = naturalWidth
+            sHeight = sWidth * dimensionRatio
+            sx = 0;
+            sy = (naturalHeight - sHeight)/2
+        }else{
+            //source image height < width
+            sHeight = naturalHeight
+            sWidth = sHeight / dimensionRatio
+            sy = 0
+            sx = (naturalWidth - sWidth)/2
+        }
+        ctx.drawImage(image, sx, sy, sWidth, sHeight, 400, 30, 160, 160*dimensionRatio)
+
+    }
     
     const submitHandler = (e) => {
         e.preventDefault();
